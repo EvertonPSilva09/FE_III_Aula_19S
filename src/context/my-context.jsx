@@ -1,9 +1,19 @@
 import { createContext } from "react";
 
-const MyContext = createContext({});
+export const MyContext = createContext({});
 
-const MyProvider = () => {
-  return <MyContext.Provider>{children}</MyContext.Provider>;
+const MyProvider = ({ children }) => {
+  const nome = "Wesley";
+  return (
+    <MyContext.Provider
+      value={{
+        nome: nome,
+        disciplina: "Front",
+      }}
+    >
+      {children}
+    </MyContext.Provider>
+  );
 };
 
 export default MyProvider;
