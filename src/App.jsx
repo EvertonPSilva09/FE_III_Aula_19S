@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { useState } from "react";
+import Box from "./components/box";
+import Container from "./components/container/container";
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const [value, setValue] = useState(100);
   return (
-    <div className="App">
-      
-    </div>
-  )
+    <main>
+      <h1>Hello Mundo</h1>
+      <Box />
+      <Container />
+    </main>
+  );
 }
 
-export default App
+export default App;
